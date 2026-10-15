@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainwater Harvesting Calculator</title>
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="rain.css">
+
+    <!-- JAVASCRIPT LINK -->
+    <script src="rain.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h2>💧 RainWise</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#learn">Learn</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div>
+        <p class="tag">SAVE WATER, SAVE THE FUTURE</p>
+        <h1>Every Drop <span>Counts!</span></h1>
+        <p>Calculate how much rainwater your household roof can collect and learn about rainwater harvesting.</p>
+        <a href="#calculator" class="btn">Calculate Now</a>
+    </div>
+    <div class="illustration">
+        <div class="sun">☀️</div>
+        <div class="cloud">☁️</div>
+        <div class="house">🏠</div>
+        <div class="tank">💧 Water Tank</div>
+    </div>
+</section>
+
+<section id="calculator" class="calculator-section">
+    <h2>Rainwater Harvesting Calculator</h2>
+    <p>Enter your roof area and average rainfall.</p>
+
+    <div class="calculator">
+        <form id="rainForm">
+            <label for="area">Roof Area (square metres)</label>
+            <input type="number" id="area" min="0.01" step="any"
+                   placeholder="Example: 100" required>
+
+            <label for="rainfall">Average Rainfall (millimetres)</label>
+            <input type="number" id="rainfall" min="0" step="any"
+                   placeholder="Example: 800" required>
+
+            <label for="efficiency">
+                Collection Efficiency: <span id="efficiencyValue">80%</span>
+            </label>
+            <input type="range" id="efficiency" min="50" max="100" value="80">
+
+            <button type="submit">Calculate Rainwater</button>
+            <button type="button" id="clearBtn" class="clear">Clear</button>
+
+            <p id="error" role="alert"></p>
+        </form>
+
+        <div class="result">
+            <h3>Estimated Water Collected</h3>
+            <h1 id="answer">0 Litres</h1>
+            <p id="description">Enter your details to calculate your rainwater collection.</p>
+            <hr>
+            <p>Gross rainwater: <strong id="gross">0 L</strong></p>
+            <p>Collection efficiency: <strong id="efficiencyResult">80%</strong></p>
+        </div>
+    </div>
+</section>
+
+<section id="learn" class="learn-section">
+    <h2>How Rainwater Harvesting Works</h2>
+
+    <div class="steps">
+        <article>
+            <h3>🌧️ 1. Rainfall</h3>
+            <p>Rain falls on the rooftop.</p>
+        </article>
+
+        <article>
+            <h3>🏠 2. Collection</h3>
+            <p>Gutters and pipes direct rainwater to a collection point.</p>
+        </article>
+
+        <article>
+            <h3>🛢️ 3. Storage</h3>
+            <p>Collected water is stored or directed to a suitable groundwater recharge system.</p>
+        </article>
+    </div>
+</section>
+
+<section class="formula-section">
+    <h2>Calculation Formula</h2>
+    <p>Gross rainwater (litres) = Roof area (m²) × Rainfall (mm)</p>
+    <p>Collectable water = Gross rainwater × Efficiency ÷ 100</p>
+    <p><strong>Example:</strong> 100 m² × 800 mm × 80% = 64,000 litres.</p>
+</section>
+
+<footer>
+    <h3>💧 RainWise</h3>
+    <p>Every drop counts. Save water for a better future.</p>
+    <small>Educational estimate; actual collection depends on roof and weather conditions.</small>
+</footer>
+
+</body>
+</html>
